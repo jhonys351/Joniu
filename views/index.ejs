@@ -1,0 +1,13 @@
+<h2>PetMax - Clínica Veterinária</h2>
+<a href="/inserir"><button>Inserir Animal</button></a>
+<table border="1">
+  <tr><th>Nome</th><th>Tipo</th><th>Raça</th><th>Nascimento</th></tr>
+  <% animais.forEach(a => { %>
+    <tr>
+      <td><%= a.nome %></td>
+      <td><%= a.tipo %></td>
+      <td><%= a.raca %></td>
+      <td><%= a.nascimento.toISOString().split('T')[0] %></td>
+    </tr>
+  <% }) %>
+</table>
